@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>KPS Preconstruction Inspection</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://alcdn.msauth.net/browser/2.38.3/js/msal-browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@azure/msal-browser@2.38.3/lib/msal-browser.min.js"></script>
 <style>
   :root{
     --navy:#1B2B44;
@@ -674,7 +673,22 @@ const msalConfig = {
   }
 };
 const GRAPH_SCOPES = ["Files.ReadWrite"];
-const msalInstance = new msal.PublicClientApplication(msalConfig);
+const msalLibLoaded = (typeof msal !== 'undefined');
+let msalInstance;
+if(msalLibLoaded){
+  msalInstance = new msal.PublicClientApplication(msalConfig);
+} else {
+  // Safe stub so the rest of the app (offline PDF generation) still works
+  // even if the Microsoft sign-in library fails to load from the CDN.
+  msalInstance = {
+    getAllAccounts: () => [],
+    getActiveAccount: () => null,
+    setActiveAccount: () => {},
+    loginPopup: async () => { throw new Error('Microsoft sign-in library failed to load. Check your internet connection and reload the page.'); },
+    acquireTokenSilent: async () => { throw new Error('Microsoft sign-in unavailable.'); },
+    acquireTokenPopup: async () => { throw new Error('Microsoft sign-in unavailable.'); }
+  };
+}
 (function restoreSession(){
   const accounts = msalInstance.getAllAccounts();
   if(accounts.length > 0){ msalInstance.setActiveAccount(accounts[0]); }
@@ -689,6 +703,10 @@ function updateAuthUI(){
     statusEl.textContent = 'Signed in as ' + (account.username || account.name) + '. Reports will save to OneDrive automatically.';
     signInBtn.style.display = 'none';
     signOutBtn.style.display = 'block';
+  } else if(!msalLibLoaded){
+    statusEl.textContent = 'Microsoft sign-in library failed to load (check your internet connection and reload the page). Reports will still download to this device.';
+    signInBtn.style.display = 'none';
+    signOutBtn.style.display = 'none';
   } else {
     statusEl.textContent = 'Not signed in. Reports will download to this device instead of saving to OneDrive.';
     signInBtn.style.display = 'block';
@@ -1020,3 +1038,4 @@ updateStepUI();
  
 </body>
 </html>
+ 
