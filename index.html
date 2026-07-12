@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,21 +32,21 @@
   header.app .brand h1{font-size:16px;margin:0;letter-spacing:.03em;font-weight:800;text-transform:uppercase;}
   header.app .brand span.tag{font-size:10px;color:var(--amber);font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
   header.app .sub{font-size:11px;color:#B9C4D3;margin-top:2px;}
-
+ 
   .steps{display:flex;margin-top:12px;gap:4px;}
   .step-dot{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.18);}
   .step-dot.done{background:var(--amber);}
   .step-dot.active{background:#fff;}
   .step-label{font-size:10px;color:#B9C4D3;text-align:center;margin-top:6px;text-transform:uppercase;letter-spacing:.04em;}
-
+ 
   main{padding:16px 14px 110px;max-width:640px;margin:0 auto;}
   .panel{display:none;}
   .panel.active{display:block;animation:fade .15s ease;}
   @keyframes fade{from{opacity:0}to{opacity:1}}
-
+ 
   .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-bottom:12px;}
   .section-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--navy);margin:0 0 10px;}
-
+ 
   label{display:block;font-size:12px;font-weight:700;color:var(--text-mute);margin-bottom:4px;text-transform:uppercase;letter-spacing:.03em;}
   input[type=text],input[type=tel],input[type=date],textarea,select{
     width:100%;padding:10px 11px;border:1px solid var(--border);border-radius:8px;font-size:15px;
@@ -53,7 +54,7 @@
   }
   textarea{resize:vertical;min-height:64px;}
   input:focus,textarea:focus,select:focus{outline:2px solid var(--navy-light);outline-offset:1px;}
-
+ 
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:none;border-radius:8px;padding:11px 16px;font-size:14px;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:.03em;}
   .btn-primary{background:var(--amber);color:#fff;}
   .btn-primary:hover{background:var(--amber-dark);}
@@ -62,10 +63,10 @@
   .btn-danger{background:#fff;color:var(--attention);border:1.5px solid var(--attention);}
   .btn-block{width:100%;}
   .btn-sm{padding:7px 10px;font-size:12px;}
-
+ 
   .bottom-nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--border);padding:10px 14px;display:flex;gap:10px;z-index:20;}
   .bottom-nav .btn{flex:1;}
-
+ 
   /* Building cards */
   .building-card{border:1px solid var(--border);border-radius:var(--radius);margin-bottom:16px;overflow:hidden;background:#fff;}
   .building-head{display:flex;align-items:center;justify-content:space-between;background:var(--navy);color:#fff;padding:11px 12px;cursor:pointer;}
@@ -76,7 +77,7 @@
   .building-body.open{display:block;}
   .subsection-label{font-size:11px;font-weight:800;color:var(--text-mute);text-transform:uppercase;letter-spacing:.04em;margin:14px 0 8px;padding-top:10px;border-top:1px dashed var(--border);}
   .subsection-label:first-child{border-top:none;padding-top:0;margin-top:0;}
-
+ 
   /* Unit cards */
   .unit-card{border:1px solid var(--border);border-radius:8px;margin-bottom:10px;overflow:hidden;background:var(--bg);}
   .unit-head{display:flex;align-items:center;justify-content:space-between;background:var(--navy-light);color:#fff;padding:9px 11px;cursor:pointer;}
@@ -85,7 +86,7 @@
   .unit-head-meta{font-size:11px;color:#C6D0DD;}
   .unit-body{padding:11px;display:none;}
   .unit-body.open{display:block;}
-
+ 
   .area-row{border:1px solid var(--border);border-left:4px solid var(--pre);border-radius:8px;margin-bottom:10px;}
   .area-row-head{display:flex;justify-content:space-between;align-items:center;padding:10px 11px;cursor:pointer;}
   .area-row-title{font-size:13px;font-weight:700;}
@@ -93,44 +94,44 @@
   .area-row-body.open{display:block;}
   .chev{transition:transform .15s;font-size:11px;color:var(--text-mute);}
   .chev.open{transform:rotate(180deg);}
-
+ 
   .cond-group{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
   .cond-btn{flex:1;min-width:76px;text-align:center;padding:8px 4px;border-radius:7px;border:1.5px solid var(--border);font-size:11px;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:.02em;background:#fff;color:var(--text-mute);}
   .cond-btn.sel-good{background:var(--good);color:#fff;border-color:var(--good);}
   .cond-btn.sel-minor{background:var(--minor);color:#fff;border-color:var(--minor);}
   .cond-btn.sel-attention{background:var(--attention);color:#fff;border-color:var(--attention);}
   .cond-btn.sel-pre{background:var(--pre);color:#fff;border-color:var(--pre);}
-
+ 
   .badge{display:inline-block;font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;color:#fff;text-transform:uppercase;}
   .badge.good{background:var(--good);}
   .badge.minor{background:var(--minor);}
   .badge.attention{background:var(--attention);}
   .badge.pre{background:var(--pre);}
-
+ 
   .photo-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;}
   .photo-thumb{position:relative;width:72px;height:72px;border-radius:6px;overflow:hidden;border:1px solid var(--border);}
   .photo-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
   .photo-thumb button{position:absolute;top:2px;right:2px;background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:18px;height:18px;font-size:11px;line-height:18px;padding:0;cursor:pointer;}
   .add-photo-label{width:72px;height:72px;border:1.5px dashed var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--text-mute);cursor:pointer;}
   .add-photo-label input{display:none;}
-
+ 
   .empty-state{text-align:center;padding:30px 16px;color:var(--text-mute);}
   .empty-state .icon{font-size:32px;margin-bottom:8px;}
-
+ 
   canvas#sigPad{width:100%;height:160px;border:1.5px dashed var(--border);border-radius:8px;background:#fff;touch-action:none;}
-
+ 
   .review-item{border-bottom:1px solid var(--border);padding:8px 0;font-size:13px;}
   .review-item:last-child{border-bottom:none;}
   .review-unit{font-weight:800;color:var(--navy);font-size:13px;margin:12px 0 4px;text-transform:uppercase;letter-spacing:.03em;}
-
+ 
   #toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 18px;border-radius:8px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:50;}
   #toast.show{opacity:1;}
-
+ 
   .helptext{font-size:11px;color:var(--text-mute);margin-top:-6px;margin-bottom:10px;}
 </style>
 </head>
 <body>
-
+ 
 <header class="app">
   <div class="brand">
     <h1>KPS Inspection</h1>
@@ -145,9 +146,9 @@
   </div>
   <div class="step-label" id="step-label">Step 1 of 4 &mdash; Job Info</div>
 </header>
-
+ 
 <main>
-
+ 
   <!-- STEP 1: JOB INFO -->
   <section class="panel active" id="panel-0">
     <div class="card">
@@ -168,7 +169,7 @@
       <input type="text" id="inspectorName" placeholder="Your name">
     </div>
   </section>
-
+ 
   <!-- STEP 2: BUILDINGS, AREAS & UNITS -->
   <section class="panel" id="panel-1">
     <div class="card" style="margin-bottom:14px;">
@@ -182,7 +183,7 @@
       No buildings added yet. Tap "Add Building" to start.
     </div>
   </section>
-
+ 
   <!-- STEP 3: REVIEW & SIGN -->
   <section class="panel" id="panel-2">
     <div class="card">
@@ -202,7 +203,7 @@
       <input type="date" id="signDate">
     </div>
   </section>
-
+ 
   <!-- STEP 4: GENERATE REPORT -->
   <section class="panel" id="panel-3">
     <div class="card">
@@ -221,16 +222,16 @@
       <div id="reportStatus" style="font-size:12px;color:var(--text-mute);"></div>
     </div>
   </section>
-
+ 
 </main>
-
+ 
 <div class="bottom-nav">
   <button class="btn btn-outline" id="backBtn" type="button">Back</button>
   <button class="btn btn-primary" id="nextBtn" type="button">Next</button>
 </div>
-
+ 
 <div id="toast"></div>
-
+ 
 <script>
 const BUILDING_AREAS = [
   "Exterior Siding",
@@ -253,7 +254,7 @@ const CONDITIONS = [
   {key:"attention", label:"Needs Attention"},
   {key:"pre", label:"Pre-existing Damage"}
 ];
-
+ 
 let state = {
   job: {},
   buildings: [],
@@ -262,24 +263,24 @@ let state = {
 let buildingCounter = 0;
 let unitCounter = 0;
 let currentStep = 0;
-
+ 
 function todayStr(){
   const d = new Date();
   return d.toISOString().split('T')[0];
 }
 document.getElementById('jobDate').value = todayStr();
 document.getElementById('signDate').value = todayStr();
-
+ 
 function showToast(msg){
   const t = document.getElementById('toast');
   t.textContent = msg;
   t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'), 1800);
 }
-
+ 
 function makeAreaId(){ return 'a'+Math.random().toString(36).slice(2,9); }
 function makePhotoId(){ return 'p'+Math.random().toString(36).slice(2,9); }
-
+ 
 function makeAreaSet(names){
   return names.map(name => ({
     id: makeAreaId(),
@@ -290,7 +291,7 @@ function makeAreaSet(names){
     open: false
   }));
 }
-
+ 
 function addBuilding(){
   buildingCounter++;
   const building = {
@@ -304,7 +305,7 @@ function addBuilding(){
   renderBuildings();
   document.getElementById('buildingsEmpty').style.display = 'none';
 }
-
+ 
 function addUnitToBuilding(buildingId){
   const building = state.buildings.find(b => b.id === buildingId);
   if(!building) return;
@@ -317,16 +318,16 @@ function addUnitToBuilding(buildingId){
   });
   renderBuildings();
 }
-
+ 
 function renderBuildings(){
   const container = document.getElementById('buildingsContainer');
   container.innerHTML = '';
   document.getElementById('buildingsEmpty').style.display = state.buildings.length ? 'none' : 'block';
-
+ 
   state.buildings.forEach(building => {
     const wrap = document.createElement('div');
     wrap.className = 'building-card';
-
+ 
     const head = document.createElement('div');
     head.className = 'building-head';
     head.innerHTML = `
@@ -339,35 +340,35 @@ function renderBuildings(){
     `;
     head.onclick = () => { building.open = !building.open; renderBuildings(); };
     wrap.appendChild(head);
-
+ 
     const body = document.createElement('div');
     body.className = 'building-body' + (building.open ? ' open' : '');
-
+ 
     const buildingLabel = document.createElement('div');
     buildingLabel.className = 'subsection-label';
     buildingLabel.textContent = 'Building-Wide Areas';
     body.appendChild(buildingLabel);
-
+ 
     building.areas.forEach(area => {
       body.appendChild(renderAreaRow(area));
     });
-
+ 
     const unitsLabel = document.createElement('div');
     unitsLabel.className = 'subsection-label';
     unitsLabel.textContent = 'Units in This Building';
     body.appendChild(unitsLabel);
-
+ 
     building.units.forEach(unit => {
       body.appendChild(renderUnitCard(building, unit));
     });
-
+ 
     const addUnitBtn = document.createElement('button');
     addUnitBtn.className = 'btn btn-ghost btn-block btn-sm';
     addUnitBtn.style.marginBottom = '10px';
     addUnitBtn.textContent = '+ Add Unit to This Building';
     addUnitBtn.onclick = () => addUnitToBuilding(building.id);
     body.appendChild(addUnitBtn);
-
+ 
     const delBtn = document.createElement('button');
     delBtn.className = 'btn btn-danger btn-sm btn-block';
     delBtn.textContent = 'Remove This Building';
@@ -378,16 +379,16 @@ function renderBuildings(){
       }
     };
     body.appendChild(delBtn);
-
+ 
     wrap.appendChild(body);
     container.appendChild(wrap);
   });
 }
-
+ 
 function renderUnitCard(building, unit){
   const wrap = document.createElement('div');
   wrap.className = 'unit-card';
-
+ 
   const head = document.createElement('div');
   head.className = 'unit-head';
   head.innerHTML = `
@@ -400,14 +401,14 @@ function renderUnitCard(building, unit){
   `;
   head.onclick = () => { unit.open = !unit.open; renderBuildings(); };
   wrap.appendChild(head);
-
+ 
   const body = document.createElement('div');
   body.className = 'unit-body' + (unit.open ? ' open' : '');
-
+ 
   unit.areas.forEach(area => {
     body.appendChild(renderAreaRow(area));
   });
-
+ 
   const delBtn = document.createElement('button');
   delBtn.className = 'btn btn-danger btn-sm btn-block';
   delBtn.textContent = 'Remove This Unit';
@@ -418,11 +419,11 @@ function renderUnitCard(building, unit){
     }
   };
   body.appendChild(delBtn);
-
+ 
   wrap.appendChild(body);
   return wrap;
 }
-
+ 
 function countFlaggedUnit(unit){
   return unit.areas.filter(a => a.condition === 'attention' || a.condition === 'pre').length;
 }
@@ -431,7 +432,7 @@ function countFlaggedBuilding(building){
   building.units.forEach(u => { count += countFlaggedUnit(u); });
   return count;
 }
-
+ 
 function updateBuildingName(buildingId, val){
   const b = state.buildings.find(b => b.id === buildingId);
   if(b) b.name = val;
@@ -442,7 +443,7 @@ function updateUnitNumber(buildingId, unitId, val){
   const u = b.units.find(u => u.id === unitId);
   if(u) u.number = val;
 }
-
+ 
 function renderAreaRow(area){
   const row = document.createElement('div');
   row.className = 'area-row';
@@ -450,7 +451,7 @@ function renderAreaRow(area){
     const colorMap = {good:'var(--good)', minor:'var(--minor)', attention:'var(--attention)', pre:'var(--pre)'};
     row.style.borderLeftColor = colorMap[area.condition];
   }
-
+ 
   const head = document.createElement('div');
   head.className = 'area-row-head';
   const badge = area.condition ? `<span class="badge ${area.condition}">${CONDITIONS.find(c=>c.key===area.condition).label}</span>` : '';
@@ -460,10 +461,10 @@ function renderAreaRow(area){
   `;
   head.onclick = () => { area.open = !area.open; renderBuildings(); };
   row.appendChild(head);
-
+ 
   const body = document.createElement('div');
   body.className = 'area-row-body' + (area.open ? ' open' : '');
-
+ 
   const hint = AREA_HINTS[area.name];
   if(hint){
     const hintEl = document.createElement('div');
@@ -473,7 +474,7 @@ function renderAreaRow(area){
     hintEl.textContent = hint;
     body.appendChild(hintEl);
   }
-
+ 
   // condition buttons
   const condGroup = document.createElement('div');
   condGroup.className = 'cond-group';
@@ -485,7 +486,7 @@ function renderAreaRow(area){
     condGroup.appendChild(b);
   });
   body.appendChild(condGroup);
-
+ 
   // notes
   const notesLabel = document.createElement('label');
   notesLabel.textContent = 'Notes';
@@ -495,7 +496,7 @@ function renderAreaRow(area){
   notes.placeholder = 'Describe existing condition...';
   notes.oninput = (e) => { area.notes = e.target.value; };
   body.appendChild(notes);
-
+ 
   // photos
   const photoLabel = document.createElement('label');
   photoLabel.textContent = 'Photos';
@@ -518,11 +519,11 @@ function renderAreaRow(area){
   addLabel.querySelector('input').onchange = (e) => handlePhotoUpload(e, area);
   photoRow.appendChild(addLabel);
   body.appendChild(photoRow);
-
+ 
   row.appendChild(body);
   return row;
 }
-
+ 
 function handlePhotoUpload(e, area){
   const file = e.target.files[0];
   if(!file) return;
@@ -545,15 +546,15 @@ function handlePhotoUpload(e, area){
   };
   reader.readAsDataURL(file);
 }
-
+ 
 document.getElementById('addBuildingBtn').onclick = addBuilding;
-
+ 
 // ---- Signature pad ----
 const sigCanvas = document.getElementById('sigPad');
 const sigCtx = sigCanvas.getContext('2d');
 let drawing = false;
 let sigHasContent = false;
-
+ 
 function resizeCanvas(){
   const ratio = window.devicePixelRatio || 1;
   const rect = sigCanvas.getBoundingClientRect();
@@ -566,7 +567,7 @@ function resizeCanvas(){
 }
 window.addEventListener('resize', () => { resizeCanvas(); });
 setTimeout(resizeCanvas, 100);
-
+ 
 function getPos(e){
   const rect = sigCanvas.getBoundingClientRect();
   if(e.touches && e.touches[0]){
@@ -583,12 +584,12 @@ window.addEventListener('mouseup', endDraw);
 sigCanvas.addEventListener('touchstart', startDraw, {passive:false});
 sigCanvas.addEventListener('touchmove', moveDraw, {passive:false});
 sigCanvas.addEventListener('touchend', endDraw);
-
+ 
 document.getElementById('clearSig').onclick = () => {
   sigCtx.clearRect(0, 0, sigCanvas.width, sigCanvas.height);
   sigHasContent = false;
 };
-
+ 
 // ---- Navigation ----
 const stepLabels = ['Job Info', 'Buildings & Units', 'Review & Sign', 'Generate Report'];
 function updateStepUI(){
@@ -603,7 +604,7 @@ function updateStepUI(){
   if(currentStep === 2) renderReviewSummary();
   window.scrollTo(0,0);
 }
-
+ 
 function renderReviewSummary(){
   const el = document.getElementById('reviewSummary');
   if(state.buildings.length === 0){
@@ -627,7 +628,7 @@ function renderReviewSummary(){
   });
   el.innerHTML = html;
 }
-
+ 
 document.getElementById('backBtn').onclick = () => {
   if(currentStep > 0){ currentStep--; updateStepUI(); }
 };
@@ -650,7 +651,7 @@ document.getElementById('nextBtn').onclick = () => {
   }
   if(currentStep < 3){ currentStep++; updateStepUI(); }
 };
-
+ 
 // ==========================================================================
 // MICROSOFT ONEDRIVE SETUP — fill these in before hosting this file
 // 1. Register an app at portal.azure.com > Microsoft Entra ID > App registrations
@@ -663,8 +664,8 @@ document.getElementById('nextBtn').onclick = () => {
 // ==========================================================================
 const msalConfig = {
   auth: {
-    clientId: "PASTE_YOUR_AZURE_APP_CLIENT_ID_HERE",
-    authority: "https://login.microsoftonline.com/PASTE_YOUR_AZURE_TENANT_ID_HERE",
+    clientId: "bf2fe5ed-142a-4a55-ae6f-e8ed5a181dd0",
+    authority: "https://login.microsoftonline.com/1979066b-105d-423c-9941-42fcd5ac0752",
     redirectUri: window.location.origin + window.location.pathname
   },
   cache: {
@@ -678,7 +679,7 @@ const msalInstance = new msal.PublicClientApplication(msalConfig);
   const accounts = msalInstance.getAllAccounts();
   if(accounts.length > 0){ msalInstance.setActiveAccount(accounts[0]); }
 })();
-
+ 
 function updateAuthUI(){
   const account = msalInstance.getActiveAccount();
   const statusEl = document.getElementById('authStatus');
@@ -710,7 +711,7 @@ document.getElementById('msSignOutBtn').onclick = () => {
   showToast('Signed out');
 };
 updateAuthUI();
-
+ 
 async function getGraphToken(){
   const account = msalInstance.getActiveAccount();
   if(!account) throw new Error('Not signed in to Microsoft');
@@ -722,14 +723,14 @@ async function getGraphToken(){
     return resp.accessToken;
   }
 }
-
+ 
 function sanitizeName(name){
   return String(name).replace(/[\\\/:*?"<>|]/g, '-').replace(/\s+/g, ' ').trim() || 'Unnamed';
 }
 function encodeGraphPath(path){
   return path.split('/').map(encodeURIComponent).join('/');
 }
-
+ 
 // Uploads any file size reliably via a Graph upload session (auto-creates folders in the path)
 async function uploadFile(path, blob, contentType){
   const token = await getGraphToken();
@@ -745,7 +746,7 @@ async function uploadFile(path, blob, contentType){
   if(!sessionResp.ok) throw new Error('Could not start upload session (' + sessionResp.status + ')');
   const session = await sessionResp.json();
   const uploadUrl = session.uploadUrl;
-
+ 
   const chunkSize = 327680 * 10; // ~3.2MB, must be a multiple of 320 KiB
   const total = blob.size;
   let start = 0;
@@ -764,7 +765,7 @@ async function uploadFile(path, blob, contentType){
     start = end + 1;
   }
 }
-
+ 
 // ---- PDF Generation ----
 document.getElementById('generatePdfBtn').onclick = () => {
   if(!document.getElementById('signName').value.trim()){
@@ -783,12 +784,12 @@ document.getElementById('generatePdfBtn').onclick = () => {
   }
   generateReports();
 };
-
+ 
 function condLabel(key){
   const c = CONDITIONS.find(c => c.key === key);
   return c ? c.label : 'Not Assessed';
 }
-
+ 
 // Builds one self-contained PDF (job header + this building's areas/units + sign-off) for a single building
 function buildBuildingDoc(building){
   const { jsPDF } = window.jspdf;
@@ -797,14 +798,14 @@ function buildBuildingDoc(building){
   const pageH = doc.internal.pageSize.getHeight();
   const margin = 40;
   let y = margin;
-
+ 
   function checkBreak(needed){
     if(y + needed > pageH - margin){
       doc.addPage();
       y = margin;
     }
   }
-
+ 
   // Header
   doc.setFillColor(27,43,68);
   doc.rect(0,0,pageW,60,'F');
@@ -817,7 +818,7 @@ function buildBuildingDoc(building){
   doc.text("Kelly's Property Services LLC — Internal Condition Record", margin, 46);
   y = 80;
   doc.setTextColor(27,34,48);
-
+ 
   // Job + building info block
   doc.setFont('helvetica','bold');
   doc.setFontSize(11);
@@ -842,7 +843,7 @@ function buildBuildingDoc(building){
   doc.setDrawColor(216,222,230);
   doc.line(margin, y, pageW - margin, y);
   y += 18;
-
+ 
   // Shared helper to print one area block (used for both building-wide and unit areas)
   function printAreaBlock(area, indent){
     checkBreak(50);
@@ -861,7 +862,7 @@ function buildBuildingDoc(building){
     doc.text(label, pageW - margin - tagW + 6, y);
     doc.setTextColor(27,34,48);
     y += 12;
-
+ 
     if(area.notes && area.notes.trim()){
       doc.setFont('helvetica','normal');
       doc.setFontSize(9);
@@ -870,7 +871,7 @@ function buildBuildingDoc(building){
       doc.text(noteLines, margin + indent, y);
       y += noteLines.length * 11 + 2;
     }
-
+ 
     if(area.photos.length){
       const thumbW = 110, thumbH = 82, gap = 8;
       let x = margin + indent;
@@ -896,7 +897,7 @@ function buildBuildingDoc(building){
     doc.line(margin + indent, y, pageW - margin, y);
     y += 12;
   }
-
+ 
   doc.setFont('helvetica','bold');
   doc.setFontSize(9);
   doc.setTextColor(91,100,114);
@@ -904,7 +905,7 @@ function buildBuildingDoc(building){
   doc.setTextColor(27,34,48);
   y += 12;
   building.areas.forEach(area => printAreaBlock(area, 0));
-
+ 
   if(building.units.length){
     checkBreak(20);
     doc.setFont('helvetica','bold');
@@ -926,7 +927,7 @@ function buildBuildingDoc(building){
     y += 18;
     unit.areas.forEach(area => printAreaBlock(area, 12));
   });
-
+ 
   // Sign-off page
   doc.addPage();
   y = margin;
@@ -952,30 +953,30 @@ function buildBuildingDoc(building){
   doc.setFontSize(8);
   doc.setTextColor(120,128,138);
   doc.text('Generated ' + new Date().toLocaleString() + ' via KPS Preconstruction Inspection App', margin, pageH - 30);
-
+ 
   return doc;
 }
-
+ 
 function logStatus(el, msg){
   const line = document.createElement('div');
   line.textContent = msg;
   line.style.marginBottom = '4px';
   el.appendChild(line);
 }
-
+ 
 async function generateReports(){
   const signedIn = !!msalInstance.getActiveAccount();
   const statusCard = document.getElementById('reportPreviewCard');
   const statusEl = document.getElementById('reportStatus');
   statusCard.style.display = 'block';
   statusEl.innerHTML = '';
-
+ 
   for(const building of state.buildings){
     const bName = building.name || 'Unnamed Building';
     const safeBName = sanitizeName(bName);
     const doc = buildBuildingDoc(building);
     const pdfFilename = sanitizeName(safeBName + ' - Inspection Report') + '.pdf';
-
+ 
     if(signedIn){
       logStatus(statusEl, `Building "${bName}": uploading report...`);
       try{
@@ -986,7 +987,7 @@ async function generateReports(){
         logStatus(statusEl, `Building "${bName}": upload failed (${e.message}) — downloaded locally instead.`);
         doc.save(pdfFilename);
       }
-
+ 
       const photoTargets = [
         ...building.areas.map(a => ({area:a, unit:null})),
         ...building.units.flatMap(u => u.areas.map(a => ({area:a, unit:u})))
@@ -1013,9 +1014,9 @@ async function generateReports(){
   }
   showToast(signedIn ? 'Reports saved to OneDrive' : 'Reports downloaded');
 }
-
+ 
 updateStepUI();
 </script>
-
+ 
 </body>
 </html>
